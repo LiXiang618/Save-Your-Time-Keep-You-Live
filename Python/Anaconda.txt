@@ -1,0 +1,11 @@
+When installing Anaconda or Miniconda, there might be an error saying "Failed to create menus" happening shortly before the installation progress could be finished. 
+
+Tips are:
+1. Remove all Java related variables from environment path.
+2. Remove all python, conda, etc, from registry. (Make sure they cannot be found from windows start menu.)
+3. Use cmd (open with admin) to run the installer. Before running, enter 'set path = '.
+4. Select "All Users" instead of "Just Me" in the first steps of installation.
+
+Reference:
+https://github.com/ContinuumIO/anaconda-issues/issues/3488
+https://github.com/ContinuumIO/anaconda-issues/issues/732
