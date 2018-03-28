@@ -1,0 +1,36 @@
+Some commonly used commands when using Git and Github.
+
+1. Manually fork a repo on Github.
+
+2. Download the repo into local directory.
+git clone https://github.com/LiXiang618/Lean.git
+
+3. Check and add remote.
+git remote -v
+git remote add upstream https://github.com/QuantConnect/Lean.git
+
+4. Sync and merge.
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+5. Sync my Github repo to the upstream repo (i.e. origin)
+push origin master
+
+6. Create new branches
+git checkout -b feature-0001-add-readme
+
+7. Push the branches to Github
+git push -u origin feature-0001-add-readme
+
+8. Switch back to master and sync
+git merge master
+git checkout master
+git merge feature-0001-add-readme
+git push origin master
+
+# You have ~/.gitconfig file where you can create alias/shortcuts.
+
+Reference:
+https://help.github.com/articles/fork-a-repo/
+https://help.github.com/articles/syncing-a-fork/
