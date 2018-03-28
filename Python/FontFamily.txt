@@ -1,0 +1,17 @@
+Solve the problem of adding new fonts (like "Open Sans Condensed") into Python.
+
+When you add new fonts to your system, you need to delete your fontList.cache file in order for matplotlib to find them.
+The fontList.cache is located in %userprofile%\.matplotlib\
+Then make sure the font file is downloaded and saved to the right directory.
+
+import matplotlib
+font = {'family' : 'normal',
+        'weight' : 'bold',
+        'size'   : 22}
+matplotlib.rc('font', **font)
+
+Then you can use matplotlib as usual.
+
+Reference:
+https://github.com/matplotlib/matplotlib/issues/3590
+https://stackoverflow.com/questions/3899980/how-to-change-the-font-size-on-a-matplotlib-plot
