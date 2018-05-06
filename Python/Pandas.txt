@@ -1,0 +1,13 @@
+How to add a new row to pandas dataframe?
+
+This is not an easy question if you have a datetime index.
+One possible solution is:
+
+df.loc["some index"] = "some value"
+
+However, this may introduce one problem. In case "some index" is already in the df, then old value will be overwritten instead of adding a new row.
+
+So two suggestions are provided here:
+
+1. Check whether "some index" is already in df, before doing the insertion.
+2. Use distinct integers as index. 
