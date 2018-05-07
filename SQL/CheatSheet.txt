@@ -1,0 +1,63 @@
+Foreign Key Constraint
+https://www.youtube.com/watch?v=JLeaM8pK8dE&list=PL08903FB7ACA1C2FB&index=2
+
+Default Constraint
+If there is a default constraint, and you insert a rwo with NULL. The NULL will be written into the new row instead of the default value.
+https://www.youtube.com/watch?v=dwSqHhMl32Y&list=PL08903FB7ACA1C2FB&index=3
+
+Orphan Record
+No Action, Cascade, Set NULL, Set Default
+https://www.youtube.com/watch?v=ETepOVi7Xk8&list=PL08903FB7ACA1C2FB&index=4
+
+Check Constraint
+NULL is allowed to be inserted even if there is a constraint.
+https://www.youtube.com/watch?v=9Zj5ODhv0b0&list=PL08903FB7ACA1C2FB&index=5
+
+Identity Column
+Set IDENTITY_INSERT table ON
+Then we have to explicitly set the indentity column.
+DBCC CHECKIDENT
+DBCC: Database Consistent Check Command
+https://www.youtube.com/watch?v=aOkFE6NLGCQ&list=PL08903FB7ACA1C2FB&index=6
+
+Select SCOPE_IDENTITY()
+Select @@IDENTITY
+session
+scope
+IDENT_CURRENT
+https://www.youtube.com/watch?v=n1iwngG_zNY&list=PL08903FB7ACA1C2FB&index=7
+
+Unique Key
+Primary Key: not allow NULL
+Unique Key: allow one NULL
+https://www.youtube.com/watch?v=oqrsfatxTYE&index=8&list=PL08903FB7ACA1C2FB
+
+Where
+Having
+Having can only be used in Select.
+Where is before groupby; having is after grouby.
+Aggregating function cannot be used in Where.
+https://www.youtube.com/watch?v=FKSSOpQe5Jc
+
+JOIN, INNER JOIN
+LEFT JOIN, LEFT OUTER JOIN
+RIGHT JOIN, RIGHT OUTER JOIN
+FULL JOIN, FULL OUTER JOIN
+CROSS JOIN
+https://www.youtube.com/watch?v=wW4xcQ3FFp4
+
+Self Join
+https://www.youtube.com/watch?v=qnYSN_7qwgg&list=PL08903FB7ACA1C2FB&index=13
+
+ISNULL
+COALESCE
+CASE WHEN expression THEN '' ELSE '' END
+https://www.youtube.com/watch?v=4ZoHY4RT1Fo&index=14&list=PL08903FB7ACA1C2FB
+
+UNION
+UNION ALL
+https://www.youtube.com/watch?v=9w5uRCFOiTo&list=PL08903FB7ACA1C2FB&index=16
+
+Execution Plan
+Advantages of Stored Procedures
+https://www.youtube.com/watch?v=uDcVd4vUU3s&index=20&list=PL08903FB7ACA1C2FB

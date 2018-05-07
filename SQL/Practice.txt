@@ -1,0 +1,58 @@
+select * from city where countrycode = "JPN"
+
+select city, state from station
+
+select distinct city from station 
+where id % 2 = 0
+
+select count(city) - count(distinct city) from station 
+
+select top(1 ) city, len(city)  from station order by len(city) asc, city  ;
+select top(1 ) city, len(city)  from station order by len(city) desc , city  ;
+
+select city from station where city like "[aeiou]%"
+select distinct city from station where city not like "[aeiou]%"
+
+select name from students where marks > 75 order by right(name,3) ,id
+
+select name from employee where salary > 2000 and months < 10
+
+select sum(city.population) from city 
+left join country
+on city.countrycode = country.code
+where country.continent = "Asia"
+
+select city.name from city 
+left join country
+on city.countrycode = country.code
+where country.continent = "Africa"
+
+select country.continent , avg(city.population) from city
+inner join country
+on city.countrycode = country.code
+group by country.continent
+
+select CASE WHEN grades.grade >= 8 THEN students.name ELSE 'NULL' END , grades.grade, students.marks from students 
+left join grades
+on students.marks >= grades.min_mark and students.marks <= grades.max_mark
+order by grades.grade desc, students.name
+
+select tmp3.hacker_id, hackers.name, tmp3.numofchallenge  from 
+(select hacker_id as hacker_id, count(challenge_id) as numofchallenge from 
+(select submissions.submission_id as submission_id, submissions.hacker_id as hacker_id, submissions.challenge_id as challenge_id, submissions.score as score, tmp.full_score as full_score
+from submissions
+left join 
+(select challenges.challenge_id as challenge_id, difficulty.score as full_score from challenges
+left join difficulty
+on challenges.difficulty_level = difficulty.difficulty_level)  tmp
+on submissions.challenge_id = tmp.challenge_id) tmp2 
+where score >= full_score
+group by hacker_id
+having count(challenge_id) > 1) tmp3 
+left join hackers
+on tmp3.hacker_id = hackers.hacker_id
+order by tmp3.numofchallenge desc, tmp3.hacker_id
+
+
+
+

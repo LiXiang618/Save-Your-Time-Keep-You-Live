@@ -5,7 +5,7 @@ One possible solution is:
 
 df.loc["some index"] = "some value"
 
-However, this may introduce one problem. In case "some index" is already in the df, then old value will be overwritten instead of adding a new row.
+However, this may introduce one problem. In case "some index" is already in the df, then old value will be overwritten instead of adding a new row. If there are more than one "some index" already in the df, then all their corresponding values will be overwritten.
 
 So two suggestions are provided here:
 
